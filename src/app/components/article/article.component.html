@@ -1,0 +1,20 @@
+<div class="articles">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 common-margin" *ngFor="let article of articles">
+        <div class="card">
+          <h6 (click)="getindividualArticale(article.id)" >#{{article.id}} {{article.articleTitle}}</h6>
+          <div class="article-details">
+            <p>Author: {{article.articleAuthor}}</p>
+            <p>Type: {{article.articleType}}</p>
+          <p *ngIf="article.created_at">Created: {{article.created_at | date:'short'}}</p>
+          <p *ngIf="article.updated_at">Updated: {{article.updated_at | date:'short'}}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!articles" class="loader">
+        <img src="../../../assets/img/loading.gif">
+      </div>
+    </div>
+  </div>
+</div>

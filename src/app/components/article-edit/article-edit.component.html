@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="card">
+  <form #articleForm="ngForm" (ngSubmit)="articleEdit(articleForm)">
+    <div class="btn-group mt-2 mb-4 clear-float">
+    <button class="btn btn-secondary mr-4" type="button">Unpublish</button>
+    <button class="btn btn-primary" type="submit">Save and publish</button>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+          <div class="form-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <label>Title:</label>
+                </div>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="articleTitle" name="articleTitle" [(ngModel)]="article.articleTitle">
+                </div>
+              </div>
+            </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <label>Article type:</label>
+            </div>
+            <div class="col-md-8">
+                <select class="form-control" id="articleType" name="articleType" [(ngModel)]="article.articleType">
+                  <option>News</option>
+                  <option>Analysis</option>
+                  <option>Event</option>
+                  <option>Review</option>
+                  <option>Feature</option>
+                  <option>Opinion</option>
+                </select>
+              </div>
+          </div>
+        </div>
+          <div class="form-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <label>Summary:</label>
+                </div>
+                <div class="col-md-8">
+                  <textarea name="articleSummary" id="articleSummary" cols="35" rows="10" [(ngModel)]="article.articleSummary"></textarea>
+                </div>
+              </div>
+            </div>
+          <div class="form-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <label>Author:</label>
+                </div>
+                <div class="col-md-8">
+                    <select class="form-control" id="articleAuthor" name="articleAuthor" [(ngModel)]="article.articleAuthor">                      
+                      <option *ngFor="let author of authors">{{author.name}}</option>
+                      <!-- <option>Sophia</option>
+                      <option>Isabella</option>
+                      <option>Emma</option>
+                      <option>Olivia</option> -->
+                    </select>
+                  </div>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Article body:</label><br>
+          <textarea name="articleBody" id="articleBody" cols="55" rows="16" [(ngModel)]="article.articleBody"></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</div>

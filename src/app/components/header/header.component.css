@@ -1,0 +1,11 @@
+.navbar ul{
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li{
+    color: white;
+    display: inline-block;
+    padding: 10px 10px;
+
+    cursor: pointer;
+}

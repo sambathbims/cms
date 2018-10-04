@@ -1,0 +1,28 @@
+.articles{
+    margin-top: 10px;
+}
+.common-margin{
+    margin: 10px 0;
+}
+.card{
+    box-shadow: 3px 4px whitesmoke;
+}
+.card h6{
+    background: #007BFF;
+    color: white;
+    padding: 20px 15px;
+}
+.card h6:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.article-details{
+    padding: 0 0 0 10px
+}
+.loader{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -999;
+}
